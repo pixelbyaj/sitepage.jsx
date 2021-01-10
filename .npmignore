@@ -1,9 +1,9 @@
-build/
-src/
-demo/
-example/
-node_modules/
-.vscode/
+build
+src
+demo
+example
+node_modules
+.vscode
 tsconfig.json
 Gruntfile.js
 .prettierrc

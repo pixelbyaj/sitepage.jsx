@@ -53,7 +53,8 @@ npm install --save sitepage.jsx
 import React, { Component } from 'react'
 
 import SitePage from 'sitepage.jsx'
-import 'sitepage.jsx/dist/index.css'
+import 'node_module/sitepage.jsx/sitepage.css'
+
 const sitePageModel={
         //brandname
         brandName: "",
