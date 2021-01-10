@@ -29,7 +29,7 @@ const sitePageModel={
         //sections
         sections: [{
                 anchor: "Home",
-                Components: [{
+                components: [{
                   component: YourComponentName,
                   name: "ComponentKey",//It has to unique
                   props: {
