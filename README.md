@@ -9,7 +9,7 @@
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/pixelbyaj)
 
 A simple and easy to use library that creates single page scrolling websites with horizontal or vertical scrolling.
-- [DEMO](https://www.pixelbyaj.com/sitepage/)
+- [DEMO](https://www.pixelbyaj.com/sitepage.jsx/)
 - [StackBlitz](https://stackblitz.com/edit/sitepagejsx)
 - [Introduction](https://github.com/pixelbyaj/sitepage.jsx#introduction)
 - [Compatibility](https://github.com/pixelbyaj/sitepage.jsx#compatibility)
