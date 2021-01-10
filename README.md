@@ -37,6 +37,11 @@ It also provides touch support for mobile phones, tablets and touch screen compu
 If you are creating an open source application under a license compatible with the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), you may use sitePage under the terms of the GPL.
 GPL © [pixelbyaj](https://github.com/pixelbyaj)
 ## Install
+### Prerequisites of bootstrap file:
+
+```html
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+```
 
 ```bash
 npm install --save sitepage.jsx
