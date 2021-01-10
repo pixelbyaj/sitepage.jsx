@@ -1,6 +1,7 @@
 build/
 src/
 demo/
+example/
 node_modules/
 .vscode/
 tsconfig.json
