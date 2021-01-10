@@ -3,7 +3,7 @@
 > Create beautiful full page scrolling website using reactJS
 
 [![License](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
-[![sitePage.jsx version](https://img.shields.io/npm/v/sitepage.jsx/latest)](https://www.npmjs.com/package/sitepage.js)
+[![sitePage.jsx version](https://img.shields.io/npm/v/sitepage.jsx/latest)](https://www.npmjs.com/package/sitepage.jsx)
 [![Known Vulnerabilities](https://snyk.io/test/github/pixelbyaj/sitePage.jsx/badge.svg?targetFile=package.json)](https://snyk.io/test/github/pixelbyaj/sitePage.jsx?targetFile=package.json)
 [![npm](https://img.shields.io/npm/dt/sitepage.jsx.svg)](https://www.npmjs.com/package/sitepage.jsx)
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/pixelbyaj)
