@@ -34,8 +34,7 @@ It also provides touch support for mobile phones, tablets and touch screen compu
 ## License
 
 ### Open source license
-If you are creating an open source application under a license compatible with the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), you may use sitePage under the terms of the GPL.
-GPL © [pixelbyaj](https://github.com/pixelbyaj)
+If you are creating an open source application under a license compatible with the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), you may use sitePage under the terms of the GPL © [pixelbyaj](https://github.com/pixelbyaj)
 ## Install
 ### Prerequisites of bootstrap file:
 

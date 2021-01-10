@@ -3,9 +3,8 @@ import React from 'react'
 import SitePage from 'sitepage.jsx'
 
 import { IOptions } from 'sitepage.jsx/dist/model'
-
 import Message from './Message'
-import "sitepage.jsx/sitepage.css"
+import "sitepage.jsx/dist/sitepage.css"
 export const model: IOptions = {
   brandName: "PixelByAJ",
   backgroundColor: "",
