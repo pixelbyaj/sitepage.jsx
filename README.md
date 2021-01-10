@@ -7,6 +7,35 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/pixelbyaj/sitePage.jsx/badge.svg?targetFile=package.json)](https://snyk.io/test/github/pixelbyaj/sitePage.jsx?targetFile=package.json)
 [![npm](https://img.shields.io/npm/dt/sitepage.jsx.svg)](https://www.npmjs.com/package/sitepage.jsx)
 [![PayPal Donate](https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg)](https://www.paypal.me/pixelbyaj)
+
+A simple and easy to use library that creates single page scrolling websites with horizontal or vertical scrolling.
+- [DEMO](https://www.pixelbyaj.com/sitepage/)
+- [StackBlitz](https://stackblitz.com/edit/sitepagejsx)
+- [Introduction](https://github.com/pixelbyaj/sitepage.jsx#introduction)
+- [Compatibility](https://github.com/pixelbyaj/sitepage.jsx#compatibility)
+- [License](https://github.com/pixelbyaj/sitepage.jsx#license)
+- [Usage](https://github.com/pixelbyaj/sitepage.jsx#usage)
+- [Options](https://github.com/pixelbyaj/sitepage.jsx#options)
+- [Reporting issues](https://github.com/pixelbyaj/sitepage.jsx#reporting-issues)
+- [Contributing to sitepage](https://github.com/pixelbyaj/sitepage.jsx#contributing-to-sitepagejs)
+- [Changelog](https://github.com/pixelbyaj/sitepage.jsx#changelog)
+- [Resources](https://github.com/pixelbyaj/sitepage.jsx#resources)
+- [Donations](https://github.com/pixelbyaj/sitepage.jsx#donations)
+
+## Introduction
+Suggestion are more than welcome, not only for feature requests but also for coding style improvements.
+Let's make this a great library to make people's lives easier!
+
+## Compatibility
+sitepage is fully functional on all modern browsers, as well as some old ones such as Internet Explorer 9, Opera 12, etc.
+It works with browsers with CSS3 support and with the ones which don't have it, making it ideal for old browsers compatibility.
+It also provides touch support for mobile phones, tablets and touch screen computers.
+
+## License
+
+### Open source license
+If you are creating an open source application under a license compatible with the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), you may use sitePage under the terms of the GPL.
+GPL © [pixelbyaj](https://github.com/pixelbyaj)
 ## Install
 
 ```bash
@@ -164,5 +193,3 @@ Donations would be more than welcome :)
 ## Sponsors
 Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://pixelbyaj.github.io/#contact)]
 
-## License
-GPL © [pixelbyaj](https://github.com/pixelbyaj)
