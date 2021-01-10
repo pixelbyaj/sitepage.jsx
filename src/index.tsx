@@ -88,8 +88,8 @@ export default class SitePage extends React.Component<Model> {
         cellEle.innerHTML = template.innerHTML;
       } else if (section.template) {
         cellEle.innerHTML = section.template;
-      } else if (section.Components) {
-        ReactDOM.render(<Renderer config={section.Components} />,cellEle);
+      } else if (section.components) {
+        ReactDOM.render(<Renderer config={section.components} />,cellEle);
       }
       sectionDiv.appendChild(cellEle);
       this.pageUtility.setSectionClass(sectionDiv);

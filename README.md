@@ -104,7 +104,13 @@ class Example extends Component {
                 active:true,//set active|false
                 anchor: "string",//link name
                 templateId:"string"//Id of the template element which to be render
-                templateUrl: "stringUrl",//use template or templateUrl
+                components: [{
+                  component: YourReactComponentName,
+                  name: "ComponentKey",//It has to unique
+                  props: {
+                    "message": "Hello" //string:string
+                  }
+                }],
                 template:"string",//use template or templateUrl
                 backgroundColor: "string",
                 verticalAlignMiddle:boolean,//By default it would be false, true|false

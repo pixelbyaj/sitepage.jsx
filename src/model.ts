@@ -44,7 +44,7 @@ export interface ISection {
   anchor?: string|any,
   template?: string,
   templateId?: string,
-  Components?: IComponent[],
+  components?: IComponent[],
   backgroundColor?: string,
   verticalAlignMiddle?: boolean|any, //true||false
   sectionClass?: string[] | string,

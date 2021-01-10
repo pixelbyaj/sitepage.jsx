@@ -13,7 +13,7 @@ export const model: IOptions = {
   sections: [{
     anchor: "Home",
     //anchorClass: [],
-    Components: [{
+    components: [{
       component: Message,
       name: "message",
       props: {
