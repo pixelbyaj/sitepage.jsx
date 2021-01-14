@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Renderer } from './renderer';
 import { Model, IOptions, ISection, Scroll, IHamburger } from './model';
 import './sitepage.css';
-
+import './swiped-events.min.js';
 export default class SitePage extends React.Component<Model> {
 
   //#region Private Variables

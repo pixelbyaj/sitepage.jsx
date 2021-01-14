@@ -2,10 +2,9 @@ import React from 'react'
 
 import SitePage from 'sitepage.jsx'
 
-import { IOptions } from 'sitepage.jsx/dist/model'
 import Message from './Message'
 import "sitepage.jsx/dist/sitepage.css"
-export const model: IOptions = {
+export const model: any = {
   brandName: "PixelByAJ",
   backgroundColor: "",
   verticalAlignMiddle: true, //true||false

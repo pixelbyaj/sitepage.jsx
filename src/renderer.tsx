@@ -28,7 +28,7 @@ export const Renderer = ({config}:any) => {
     return items.map((item: any) => {
       const { Component, name, ...props } = item;
       return (
-        <Fragment key={props.name}>
+        <Fragment key={name}>
           <Component {...props} />
         </Fragment>
       );

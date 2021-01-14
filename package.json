@@ -1,6 +1,6 @@
 {
     "name": "sitepage.jsx",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Create beautiful full page scrolling website using reactJS",
     "author": "Abhishek Joshi aka the PixelByAJ https://www.pixelbyaj.com",
     "license": "GPL",
@@ -19,8 +19,8 @@
         "README.md"
     ],
     "scripts": {
-        "build": "microbundle-crl --no-compress --format modern,cjs",
-        "start": "microbundle-crl watch --no-compress --format modern,cjs",
+        "build": "microbundle-crl --compress --format modern,cjs --no-sourcemap",
+        "start": "microbundle-crl watch --format modern,cjs",
         "prepare": "run-s build",
         "test": "run-s test:unit test:lint test:build",
         "test:build": "run-s build",

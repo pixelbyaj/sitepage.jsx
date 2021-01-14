@@ -35,13 +35,15 @@ It also provides touch support for mobile phones, tablets and touch screen compu
 
 ### Open source license
 If you are creating an open source application under a license compatible with the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html), you may use sitePage under the terms of the GPL © [pixelbyaj](https://github.com/pixelbyaj)
-## Install
-### Prerequisites of bootstrap file:
 
+
+## Prerequisites:
+
+### Bootstrap CSS
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 ```
-
+## Install
 ```bash
 npm install --save sitepage.jsx
 ```
@@ -52,7 +54,7 @@ npm install --save sitepage.jsx
 import React, { Component } from 'react'
 
 import SitePage from 'sitepage.jsx'
-import 'node_module/sitepage.jsx/sitepage.css'
+import 'node_module/dist/sitepage.css'
 
 const sitePageModel={
         //brandname
@@ -171,7 +173,7 @@ class Example extends Component {
     }
 ```
 ### Public API
-with sitePage 3.0.0 new API has been exposed to have more control on sitepage.js
+with sitePage 2.0.0 you can now access the same API which you can do with sitepage.js
 * gotoPage(pageId: string);
 * navigateToNextPage();
 * navigateToPrevPage();
@@ -179,17 +181,16 @@ with sitePage 3.0.0 new API has been exposed to have more control on sitepage.js
 * getActiveSection();
 ```javascript
         //for example
-        var sitePage = new SitePage(id,options);
-        sitePage.api.gotoPage('page3');
-        sitePage.api.navigateToNextPage();
-        sitePage.api.navigateToPrevPage();
-        sitePage.api.getMenuItems();
-        sitePage.api.getActivePage();
+        sitePageModel.gotoPage('page3');
+        sitePageModel.navigateToNextPage();
+        sitePageModel.navigateToPrevPage();
+        sitePageModel.getMenuItems();
+        sitePageModel.getActivePage();
 ```
 ## Reporting issues
 ## Contributing to sitepage
 ## Changelog
-To see the list of recent changes, see [Releases section](https://github.com/pixelbyaj/sitePage/releases).
+To see the list of recent changes, see [Releases section](https://github.com/pixelbyaj/sitePage.jsx/releases).
 ## Resources
 ## Donations
 Donations would be more than welcome :)
