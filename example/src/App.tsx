@@ -15,7 +15,7 @@ export const model: any = {
       component: Message,
       name: "message",
       props: {
-        "message": "Hello"
+        "message": "Hello Message"
       }
     }],
     backgroundColor: "#ff5f45",

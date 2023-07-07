@@ -11,22 +11,23 @@ export enum Scroll {
 }
 
 export interface IOptions {
-  brandName?: string,
-  brandLogoUrl?: string,
-  backgroundColor?: string,
-  navigation?: Scroll,
-  menuId?: string,
-  anchors?: boolean | any,
-  verticalAlignMiddle?: boolean | any,
-  autoScrolling?: boolean | any,
-  keyboardNavigation?: boolean | any,
-  scrollbar?: boolean | any,
-  transitionSpeed?: number,
-  easing?: string,
-  sameurl?: boolean | any,
-  hamburger?: boolean | IHamburger
-  sections?: ISection[],
-  api: IAPI | any
+  brandName?: string;
+  brandLogoUrl?: string;
+  backgroundColor?: string;
+  navigation: Scroll;
+  menuId: string;
+  anchors?: boolean;
+  hamburger?: boolean | IHamburger;
+  pageIndicator?: boolean;
+  verticalAlignMiddle?: boolean;
+  autoScrolling?: boolean;
+  keyboardNavigation?: boolean;
+  scrollbar?: boolean;
+  transitionSpeed?: number;
+  easing?: string;
+  sameurl?: boolean;
+  sections: ISection[];
+  api: IAPI | any;
 }
 export interface IComponent {
   component: any,

@@ -21,22 +21,23 @@ export default class SitePage extends React.Component<Model> {
   //#endregion Private Variables
 
   DEFAULT = {
-    BACKGROUNDCOLOR: "#ffffff",
+    BACKGROUNDCOLOR: "#fc6c7c",
     MENUID: "sp-menu",
     NAVIGATION: Scroll.Vertical,
     EASING: "ease",
     SAMEURL: true,
     AUTOSCROLLING: true,
-    ANCHORS: true,
+    ANCHORS: false,
     VERTICALALIGNMIDDLE: true,
     KEYBOARDNAVIGATION: true,
     SCROLLBAR: false,
     TRANSITIONSPEED: 1000,
-    HAMBURGER: true,
+    HAMBURGER: false,
+    PAGEINDICATOR: true,
     HaMBURGERLINECOLOR: '#ffffff',
   };
 
-  model: IOptions|any = {
+  model: IOptions | any = {
     brandName: "",
     brandLogoUrl: "",
     backgroundColor: this.DEFAULT.BACKGROUNDCOLOR,
@@ -46,6 +47,7 @@ export default class SitePage extends React.Component<Model> {
     sections: [],
     navigation: this.DEFAULT.NAVIGATION,
     hamburger: this.DEFAULT.HAMBURGER,
+    pageIndicator: this.DEFAULT.PAGEINDICATOR,
     autoScrolling: this.DEFAULT.AUTOSCROLLING,
     keyboardNavigation: this.DEFAULT.KEYBOARDNAVIGATION,
     scrollbar: this.DEFAULT.SCROLLBAR,
@@ -89,7 +91,7 @@ export default class SitePage extends React.Component<Model> {
       } else if (section.template) {
         cellEle.innerHTML = section.template;
       } else if (section.components) {
-        ReactDOM.render(<Renderer config={section.components} />,cellEle);
+        ReactDOM.render(<Renderer config={section.components} />, cellEle);
       }
       sectionDiv.appendChild(cellEle);
       this.pageUtility.setSectionClass(sectionDiv);
@@ -138,6 +140,26 @@ export default class SitePage extends React.Component<Model> {
       nav.appendChild(navDiv);
       this.$.querySelector("body")?.insertBefore(nav, this.$e.parentElement);
       return navUl;
+    },
+    setPageIndicator: (anchor: string, anchorId: string): HTMLElement => {
+
+      let navLi = this.$.createElement("li");
+      navLi.setAttribute("title", anchor);
+
+      let navA = this.$.createElement("a");
+      navA.setAttribute("id", `pg_${anchorId}`);
+      navA.removeEventListener("click", this.eventListners.navigationClick);
+      navA.setAttribute("href", "javascript:void(0)");
+      navA.setAttribute("data-href", anchorId);
+      navA.addEventListener("click", this.eventListners.navigationClick);
+
+
+      let spanEle = this.$.createElement("span");
+      navA.appendChild(spanEle);
+
+      navLi.appendChild(navA);
+
+      return navLi;
     },
     setNavigationLink: (classList: string[], anchor: string, anchorId: string): HTMLElement => {
       let navLi = this.$.createElement("li");
@@ -348,6 +370,8 @@ export default class SitePage extends React.Component<Model> {
           location.hash = "#" + sectionId;
         }
       }
+      this.$.querySelector("a.active")?.classList.remove("active");
+      this.$.querySelector(`#pg_${sectionId}`)?.classList.add("active");
     }
   }
   //#endregion
@@ -596,7 +620,13 @@ export default class SitePage extends React.Component<Model> {
       menuBar.appendChild(brandName);
       this.$.querySelector("body")?.insertBefore(menuBar, this.$e.parentElement);
     }
-
+    let pageNavDiv: HTMLElement | null = null;
+    let pageIndicatorUl: HTMLElement | null = null;
+    if (this.model.pageIndicator) {
+      pageNavDiv = this.$.createElement("div") as HTMLElement;
+      pageNavDiv.classList.add(...["sp-pg-nav", "sp-pg-right"]);
+      pageIndicatorUl = this.$.createElement("ul") as HTMLElement;
+    }
     //Iterate Sections
     this.model.sections.forEach((section: ISection, index: number) => {
       let anchorId = "page" + (index + 1);
@@ -608,7 +638,7 @@ export default class SitePage extends React.Component<Model> {
       this._sectionIds.push(anchorId);
       if (this.model.anchors || this.model.hamburger) {
         //navigation
-        var anchorClass = ["nav-link", "text-nowrap"];
+        let anchorClass = ["nav-link", "text-nowrap"];
         if (section.anchorClass) {
           if (typeof (section.anchorClass) === 'string') {
             section.anchorClass = section.anchorClass.split(',');
@@ -618,11 +648,18 @@ export default class SitePage extends React.Component<Model> {
         let navLi = this.pageUtility.setNavigationLink(anchorClass, section.anchor, anchorId);
         navUl.appendChild(navLi);
       }
+      // Add PageIndicator
+      const pageIndicatorLi = this.pageUtility.setPageIndicator(section.anchor, anchorId);
+      if (pageIndicatorUl) {
+        pageIndicatorUl.appendChild(pageIndicatorLi);
+      }
       if (section.backgroundColor) {
         this.pageUtility.setBackgroundColor(sectionEle, section.backgroundColor);
       }
     });
-
+    if (pageNavDiv) {
+      pageNavDiv.appendChild(pageIndicatorUl as HTMLElement);
+    }
     if (this.model.navigation.toLowerCase() === "horizontal") {
       this.pageUtility.setSectionHorizontal(this.$e);
       this.scrollWay = Scroll.Horizontal;
@@ -639,6 +676,9 @@ export default class SitePage extends React.Component<Model> {
         activeId = active.getAttribute("data-anchor");
       }
     }
+    if(pageNavDiv){
+      this.$.querySelector("body")?.insertBefore(pageNavDiv, this.$e);
+  }
     this.scrollEvents.scrollToSection(activeId);
     this.$.querySelector(".nav-link[href='#" + activeId + "']")?.classList.add("active");
 
